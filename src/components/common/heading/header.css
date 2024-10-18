@@ -1,0 +1,122 @@
+.logo-image {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    object-fit: cover; 
+}
+
+.head{
+    padding: 20px 0;
+    color: #fff;
+}
+
+.logo-text-container {
+    display: flex;
+    align-items: center; 
+}
+
+.text-container {
+    margin-left: 10px; 
+    color: #fff;
+}
+  
+.text-container h1 {
+    font-size: 24px;
+    font-weight: 900;
+    margin: 0; 
+}
+
+.text-container span {
+    font-size: 14px;
+    color: #fff;
+}
+
+.head .icon {
+    margin-left: 10px;
+}
+
+
+/*----------Header---------*/
+header{
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 30px;
+    position: relative;
+}
+
+header ul{
+    padding: 30px 20px;
+}
+
+header li{
+    margin-right: 40px;
+} header ul li a{
+    color: #fff;
+    font-weight: 500;
+    transition: 0.5s;
+} header ul li a:hover{
+    color: #474a49;
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center; 
+}
+
+.login-btn{
+    color: #fff; 
+    padding: 30px 70px; 
+    cursor: pointer;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+} .login-btn:hover{
+    color: #474a49;
+}
+.signup-btn {
+    color: rgb(219, 121, 30); 
+    background-color: #1d1f1e;
+    padding: 30px 70px; 
+    cursor: pointer;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+
+.toggle{
+    display: none;
+}
+
+
+@media screen and (max-width : 768px){
+    /* .signup-btn{
+        clip-path: none;
+    } */
+    header{
+        margin: 0;
+        background-color: #474a49;
+        position: relative;
+    }
+    header ul.flexSB {
+        display: none;
+    }
+    header ul li{
+        margin-bottom: 20px;
+    }
+
+    .toggle{
+        display: block;
+        background: none;
+        color: #fff;
+        font-size: 30px;
+        position: absolute;
+        right: 20px;
+        /* top: 0; */
+    }
+    .mobile-nav{
+        position: absolute;
+        top: 5vh;
+        left: 0;
+        width: 100%;
+        background-color: #474a49;
+    }
+    
+}

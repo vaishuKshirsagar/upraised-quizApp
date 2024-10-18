@@ -1,0 +1,60 @@
+.contacts iframe {
+    width: 100%;
+    height: 90%;
+    border: none;
+  }
+  .contacts .right {
+    padding: 50px;
+  }
+
+  .contacts .left{
+    padding: 50px;
+    height: 90%;
+  }
+  .contacts h1 {
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .contacts p {
+    color: grey;
+  }
+  .contacts .items {
+    margin: 30px 0;
+  }
+  .contacts .box p {
+    font-size: 17px;
+    margin-top: 5px;
+  }
+  .contacts textarea,
+  .contacts input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    outline: none;
+    border: 1px solid grey;
+  }
+  .contacts .send-btn{
+    background-color: #1d1f1e;
+    color: rgb(219, 121, 30);
+    margin-top: 2px;
+  }
+
+  form .flexSB input:nth-child(1) {
+    margin-right: 10px;
+  }
+  .contacts h4 {
+    margin-top: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  @media screen and (max-width: 768px) {
+    .contacts .container {
+      flex-direction: column;
+    }
+    .contacts iframe {
+      height: 50vh;
+    }
+    .contacts .row {
+      width: 100%;
+    }
+  }

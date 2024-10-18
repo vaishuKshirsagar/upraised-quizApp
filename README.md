@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# Quiz Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+The Quiz Web App is an interactive platform designed to evaluate users across various skill sets through a series of questions. Users can take quizzes on topics such as Linux, DevOps, and more, answer questions one at a time, and receive a score report at the end. The app is built using React, React Router for navigation, and consumes a mock API for fetching questions.
 
-## Available Scripts
+## Features
+- **Home Screen**: Users can start the quiz with a single click, which initiates an API request to fetch questions.
+- **Topics Screen**: Users can view and select various topics to take quizzes based on their interests.
+- **Question Screen**: Questions are displayed one by one, including optional images, and users can select answers before proceeding.
+- **Score Report**: After the quiz, users receive a score report detailing their performance.
+- **Responsive Design**: The app is designed to be user-friendly and responsive across different devices.
 
-In the project directory, you can run:
+## Technology Stack
+- **Frontend**: React
+- **Routing**: React Router
+- **State Management**: React hooks (`useState`, `useEffect`)
+- **Styling**: CSS for custom styles
+- **Mock API**: Quiz API (for question retrieval)
 
-### `npm start`
+## Installation
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/quiz-web-app.git
+    cd quiz-web-app
+    ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. Start the development server:
+    ```bash
+    npm start
+    ```
 
-### `npm test`
+## API Endpoints
+1. **Start Quiz**
+   - **URL**: `/api/quiz/start`
+   - **Method**: POST
+   - **Description**: Starts a new quiz and fetches questions.
+   - **Request Body**:
+     ```json
+     {}
+     ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Submit Response**
+   - **URL**: `/api/quiz/submit`
+   - **Method**: POST
+   - **Description**: Submits the user's response for a specific question.
+   - **Request Body**:
+     ```json
+     {
+       "questionId": "string",
+       "selectedAnswers": ["string"],
+       "timeTaken": "number" // time in seconds
+     }
+     ```
 
-### `npm run build`
+3. **Finish Quiz**
+   - **URL**: `/api/quiz/finish`
+   - **Method**: POST
+   - **Description**: Completes the quiz and retrieves the score report.
+   - **Request Body**:
+     ```json
+     {}
+     ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Screens
+- **Home Screen**: Users can click the “Start” button to begin the quiz and are redirected to the quiz topic selection screen.
+- **Topics Screen**: Displays a grid of available topics with images and question counts. Users can click on a topic to start the quiz.
+- **Question Screen**: Displays one question at a time with multiple-choice answers. Users must select at least one option before proceeding. An API request is made to submit the user's response before showing the next question.
+- **Report Screen**: Shows the total score, number of correct and incorrect answers, and includes a “Start Again” button to retake the quiz.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Deployment
+To deploy the web app, you can use platforms like Vercel or Netlify. Follow the specific platform documentation for deployment steps.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Documentation
+Ensure to review the code comments for clarity. A detailed explanation of the app's functionality and design choices is provided throughout the codebase.
 
-### `npm run eject`
+## Best Practices
+- Follow REST guidelines for URL patterns and response status codes.
+- Maintain clean code with proper commenting for readability.
+- Implement error handling and logging for production readiness.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Bonus Features (if time permits)
+- Containerization using Docker.
+- Enhanced error logging and exception handling.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Acknowledgments
+Thanks to the online communities and resources that provided guidance throughout the development process.

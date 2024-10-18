@@ -1,0 +1,28 @@
+.quiz-container {
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 600px;
+  background-color: rgb(193, 151, 231);
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.answers button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: rgb(226, 148, 228);
+  border: 2px solid #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.answers button:hover {
+  background-color: #ec84b4;
+}
+
+.answers .selected {
+  background-color: #e0e0e0;
+  border-color: #bbb;
+}
